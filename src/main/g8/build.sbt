@@ -54,7 +54,7 @@ lazy val tasty = project.in(file("tasty"))
   Compile / logBuffered      := true,
   Compile / scalacOptions    += ("-Xprint:" + printPhases.mkString(",")),
   Compile / taste := Def.sequential(
-    dottytags.jvm / Compile / compile,
+    $name;format="camel"$ / Compile / compile,
     Compile / clean,
     (Compile / run).toTask("")
   ).value,
