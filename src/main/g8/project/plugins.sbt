@@ -1,1 +1,3 @@
-addSbtPlugin("ch.epfl.lamp" % "sbt-dotty" % "0.5.2")
+$if(tests.truthy)$
+addSbtPlugin("org.scalameta" % "sbt-mdoc" % "2.2.16" )
+$endif$
